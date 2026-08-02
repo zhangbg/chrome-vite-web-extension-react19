@@ -1,0 +1,4 @@
+dist_chrome/**
+dist_firefox/**
+node_modules/**
+pnpm-lock.yaml
