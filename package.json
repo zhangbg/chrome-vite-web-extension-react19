@@ -13,7 +13,9 @@
     "build:firefox": "vite build --config vite.config.firefox.ts",
     "dev": "nodemon --config nodemon.chrome.json",
     "dev:chrome": "nodemon --config nodemon.chrome.json",
-    "dev:firefox": "nodemon --config nodemon.firefox.json"
+    "dev:firefox": "nodemon --config nodemon.firefox.json",
+    "lint:css": "stylelint \"src/**/*.css\" \"public/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" \"public/**/*.css\" --fix"
   },
   "type": "module",
   "dependencies": {
@@ -40,6 +42,10 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "fs-extra": "^11.3.2",
     "nodemon": "^3.1.10",
+    "postcss": "^8.5.25",
+    "postcss-load-config": "^6.0.1",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4.1.16",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
