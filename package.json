@@ -17,7 +17,9 @@
     "lint:css": "stylelint \"src/**/*.css\" \"public/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" \"public/**/*.css\" --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\" \"public/**/*.css\" \"*.ts\" \"*.json\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\" \"public/**/*.css\" \"*.ts\" \"*.json\""
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\" \"public/**/*.css\" \"*.ts\" \"*.json\"",
+    "prepare": "husky",
+    "lint-staged": "npx lint-staged"
   },
   "type": "module",
   "dependencies": {
@@ -26,7 +28,10 @@
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
     "@crxjs/vite-plugin": "^2.0.3",
+    "@eslint/js": "^9.39.5",
     "@tailwindcss/vite": "^4.1.11",
     "@types/chrome": "^0.1.11",
     "@types/node": "^24.9.1",
@@ -43,6 +48,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "fs-extra": "^11.3.2",
+    "lint-staged": "^17.3.0",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.25",
     "postcss-load-config": "^6.0.1",
